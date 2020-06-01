@@ -23,10 +23,11 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
-// mongoose.connect("mongodb://localhost:<3000>/yelp_camp_fv");
-mongoose.connect("mongodb+srv://RaviYelpcamp:RaviChandra@cluster0-k3pf9.mongodb.net/test?retryWrites=true&w=majority");
+// mongoose.connect("mongodb://localhost:3000/yelp_camp_fv");
+// mongoose.connect("mongodb+srv://RaviYelpcamp:RaviChandra@cluster0-k3pf9.mongodb.net/test?retryWrites=true&w=majority");
 // var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_fv";
-// mongoose.connect(url);
+var url = "mongodb+srv://RaviYelpcamp:RaviChandra@cluster0-k3pf9.mongodb.net/test?retryWrites=true&w=majority" || "mongodb://localhost:3000/yelp_camp_fv" ;
+mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
